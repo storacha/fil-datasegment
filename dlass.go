@@ -361,7 +361,11 @@ func doTask(ctx context.Context, p pieceTask, segmentBuf []byte, maybeExisting b
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		return xerrors.Errorf("HTTP error code %d", resp.StatusCode)
+		return xerrors.Errorf("HTTP error code %d from %s ", resp.StatusCode, p.url)
+	}
+
+	if resp.ContentLength < 0 {
+		return xerrors.Errorf("unknown Content-Length from %s", p.url)
 	}
 
 	if _, err = io.ReadFull(
