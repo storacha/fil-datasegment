@@ -14,15 +14,15 @@ import (
 	"sync/atomic"
 	"time"
 
+	"code.riba.cloud/go/toolbox-interplanetary/fil"
+	"code.riba.cloud/go/toolbox/cmn"
+	"code.riba.cloud/go/toolbox/ufcli"
 	"github.com/detailyang/go-fallocate"
 	"github.com/edsrzf/mmap-go"
 	"github.com/filecoin-project/go-data-segment/datasegment"
 	commp "github.com/filecoin-project/go-fil-commp-hashhash"
 	filabi "github.com/filecoin-project/go-state-types/abi"
 	"github.com/mattn/go-isatty"
-	"github.com/ribasushi/go-toolbox-interplanetary/fil"
-	"github.com/ribasushi/go-toolbox/cmn"
-	"github.com/ribasushi/go-toolbox/ufcli"
 	"golang.org/x/sync/errgroup"
 	"golang.org/x/xerrors"
 )

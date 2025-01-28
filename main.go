@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"os"
 
+	"code.riba.cloud/go/toolbox/ufcli"
 	logging "github.com/ipfs/go-log/v2"
-	"github.com/ribasushi/go-toolbox/ufcli"
 )
 
 var log = logging.Logger(fmt.Sprintf("%s(%d)", "fil-datasegment", os.Getpid()))

@@ -6,11 +6,11 @@ import (
 	"net/url"
 	"time"
 
+	"code.riba.cloud/go/toolbox-interplanetary/fil"
+	"code.riba.cloud/go/toolbox/cmn"
 	"github.com/hashicorp/go-retryablehttp"
 	"github.com/ipfs/go-cid"
 	logging "github.com/ipfs/go-log/v2"
-	"github.com/ribasushi/go-toolbox-interplanetary/fil"
-	"github.com/ribasushi/go-toolbox/cmn"
 )
 
 func init() {
